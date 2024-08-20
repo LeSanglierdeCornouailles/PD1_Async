@@ -2,14 +2,13 @@
  * @description       : 
  * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
  * @group             : 
- * @last modified on  : 08-09-2024
+ * @last modified on  : 08-20-2024
  * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
 **/
 // Use .soql files to store SOQL queries.
 // You can execute queries in VS Code by selecting the
 //     query text and running the command:
 //     SFDX: Execute SOQL Query with Currently Selected Text
-
-SELECT Id, Name, OwnerId, CloseDate FROM Opportunity 
-                                    WHERE IsClosed = False 
-                                    AND CloseDate < TODAY
+SELECT Id, CronJobDetail.Id, CronJobDetail.Name, CronJobDetail.JobType 
+FROM CronTrigger 
+ORDER BY CreatedDate
