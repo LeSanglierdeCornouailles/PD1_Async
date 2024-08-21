@@ -1,0 +1,14 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 08-21-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:page standardController="Contact">
+    <apex:pageBlock title="Contact Summary">
+        <apex:pageBlockSection>
+          <apex:detail subject="{!Contact.ownerId}" relatedList="false" title="false"/> 
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
